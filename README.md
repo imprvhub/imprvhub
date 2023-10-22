@@ -1,4 +1,4 @@
-Full Stack Developer with expertise in a wide range of technologies, including Python, React, Golang, Flask, Node.js, Java, JavaScript, and CSS. My focus goes beyond code; I thrive on creative problem-solving and consistently seek opportunities to innovate and enhance user experiences.
+I'm a versatile programmer in Python, React, and Java. Exploring this fascinating journey of software development, forging solutions, and seamless integrations. Dedicated to growth and collaboration in this exciting path.
 
 Currently Learning
 I'm continually expanding my knowledge and skills in the ever-evolving world of programming. My recent endeavors include mastering new frameworks and exploring advanced concepts in machine learning and data science.
