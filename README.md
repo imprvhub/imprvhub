@@ -1,8 +1,3 @@
-I'm a versatile programmer in Python, React, and Java. Exploring this fascinating journey of software development, forging solutions, and seamless integrations. Dedicated to growth and collaboration in this exciting path.
+Greetings! I'm Iván Luna, based in Buenos Aires, a back-end developer with a technical focus on Python. My experience, spanning four years, includes proficiency in technologies such as Vanilla Javascript, Vue.js, React.js, Vite.js, Nuxt.js, and Node.js. During my studies in Psychology, programming and development were a kind of complementary interest. As I progressed, this interest transitioned to take a central role in my life. I also delved into the intricate details of Java and Spring Security, even undergoing training in this language and framework to enhance my skills. My recent endeavors include mastering new frameworks and exploring advanced concepts in machine learning and data science. Currently, my focus is on integrating Arduino into my projects, exploring robotics with Python. I'm excited about the possibilities this combination offers and look forward to applying this experience to future challenges. 
 
-Continually expanding my knowledge and skills in the ever-evolving world of programming. My recent endeavors include mastering new frameworks and exploring advanced concepts in machine learning and data science.
-
-
-I'm enthusiastic about collaborating with like-minded professionals and contributing to exciting projects. If you have a project or idea in mind, feel free to reach out! I'm always open to new opportunities.
-
-Looking forward to connecting with fellow developers and innovators! Let's build something amazing together.
+In the active pursuit of job opportunities, my commitment to innovation and dedication positions me as a results-oriented professional. I'm open to new and exciting opportunities.
