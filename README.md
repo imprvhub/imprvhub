@@ -14,7 +14,7 @@ Eager to transition into my first professional role in development, I'm ready to
 </p>
 <div align="center">  
 
-### 🛠️ Tech Stack
+### 🛠️ Tech Stack:
 
 </div>  
 <div align="center">  
@@ -27,7 +27,7 @@ Eager to transition into my first professional role in development, I'm ready to
 
 <div align="center">  
   
-### 📧 How to Reach Me
+### 📧 How to Reach Me:
 Email: [contact@ivanluna.dev](mailto:contact@ivanluna.dev)
 
 </div>
