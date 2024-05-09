@@ -22,5 +22,5 @@ Eager to transition into my first professional role in development, I'm ready to
 <img alt="postgres" src="https://img.shields.io/badge/-PostgreSQL-242938?style=flat-square&logo=postgresql&logoColor=white" />
 </div>
 
-## 📧 Contact
-Email me at [contact@ivanluna.dev](mailto:contact@ivanluna.dev)
+## 📧 How to Reach Me
+Email: [contact@ivanluna.dev](mailto:contact@ivanluna.dev)
