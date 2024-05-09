@@ -12,8 +12,11 @@
 <p>Based in Buenos Aires, I specialize in <strong>backend</strong> and <strong>fullstack development</strong>, using <strong>Python</strong> as main language since October 2020, when I began learning to program. My experience in frontend development includes working with <strong>Vanilla JS</strong>, <strong>React.js</strong>, and <strong>Node.js</strong>, always with a focus on integrating these technologies into Python-based backend solutions. Additionally, my projects have involved approaches utilizing cloud platforms like <strong>AWS</strong>, <strong>GCP</strong>, and <strong>Azure</strong>. 
 Eager to transition into my first professional role in development, I'm ready to contribute to innovative projects and leverage my expertise!
 </p>
+<div align="center">  
 
 ### 🛠️ Tech Stack
+
+</div>  
 <div align="center">  
   <img alt="Python" src="https://img.shields.io/badge/-Python-01357A?style=flat-square&logo=python&logoColor=white" /><img alt="Flask" src="https://img.shields.io/badge/-Flask-01427C?style=flat-square&logo=flask&logoColor=white" /><img alt="Django" src="https://img.shields.io/badge/-Django-014E85?style=flat-square&logo=django&logoColor=white" /><img alt="Google Cloud Platform" src="https://img.shields.io/badge/-Google_Cloud_Platform-1a67e4?style=flat-square&logo=google-cloud&logoColor=white" /><img alt="github actions" src="https://img.shields.io/badge/-Github_Actions-1a75ed?style=flat-square&logo=github-actions&logoColor=white" /><img alt="Docker" src="https://img.shields.io/badge/-Docker-1a84f5?style=flat-square&logo=docker&logoColor=white" /><img alt="React" src="https://img.shields.io/badge/-React-1a93ff?style=flat-square&logo=react&logoColor=white" /><img alt="Azure" src="https://img.shields.io/badge/-Azure-2fa0fc?style=flat-square&logo=microsoftazure&logoColor=white" /><img alt="Netlify" src="https://img.shields.io/badge/-Netlify-3691AB?style=flat-square&logo=netlify&logoColor=white" />
 </div>
@@ -22,5 +25,9 @@ Eager to transition into my first professional role in development, I'm ready to
 <img alt="postgres" src="https://img.shields.io/badge/-PostgreSQL-242938?style=flat-square&logo=postgresql&logoColor=white" />
 </div>
 
+<div align="center">  
+  
 ### 📧 How to Reach Me
 Email: [contact@ivanluna.dev](mailto:contact@ivanluna.dev)
+
+</div>
