@@ -28,6 +28,6 @@ Eager to transition into my first professional role in development, I'm ready to
 <div align="center">  
   
 ### 📧 How to Reach Me:
-Email: [contact@ivanluna.dev](mailto:contact@ivanluna.dev)
+Email: [contact@ivanluna.dev](https://ivanluna.dev/contact/)
 
 </div>
