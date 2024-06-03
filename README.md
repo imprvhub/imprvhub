@@ -23,6 +23,10 @@ Eager to transition into my first professional role in development, I'm ready to
 <div align="center">
   <img alt="Nodejs" src="https://img.shields.io/badge/-Nodejs-fff?style=flat-square&logo=Node.js&logoColor=black" /><img alt="Vue.js" src="https://img.shields.io/badge/-Vue.js-fff?style=flat-square&logo=Vue.js&logoColor=black" /><img alt="javascript" src="https://img.shields.io/badge/-VanillaJS-fff?style=flat-square&logo=javascript&logoColor=242938" /><img alt="git" src="https://img.shields.io/badge/-Git-fff?style=flat-square&logo=git&logoColor=black" /><img alt="html5" src="https://img.shields.io/badge/-HTML5-fff?style=flat-square&logo=html5&logoColor=black" /><img alt="astro" src="https://img.shields.io/badge/-Astro-fff?style=flat-square&logo=astro&logoColor=black" /><img alt="npm" src="https://img.shields.io/badge/-NPM-fff?style=flat-square&logo=npm&logoColor=black" /><img alt="amazonaws" src="https://img.shields.io/badge/-AWS-fff?style=flat-square&logo=amazonaws&logoColor=black" /><img alt="vercel" src="https://img.shields.io/badge/-Vercel-fff?style=flat-square&logo=vercel&logoColor=black" /><img alt="mysql" src="https://img.shields.io/badge/-MySQL-fff?style=flat-square&logo=mysql&logoColor=black" /><img alt="postgres" src="https://img.shields.io/badge/-PostgreSQL-fff?style=flat-square&logo=postgresql&logoColor=black" />
 </div>
+<br>
+<div id="header" align="center">
+  <img src="https://komarev.com/ghpvc/?username=ivnimprv&color=585858" alt=""/>
+</div>
 
 
 
