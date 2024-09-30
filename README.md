@@ -9,9 +9,8 @@
     </a>
   </div>
 
-<p>Based in Buenos Aires, I specialize in <strong>backend</strong> and <strong>fullstack development</strong>, using <strong>Python</strong> as main language since October 2020, when I began learning to program. My experience in frontend development includes working with <strong>Vanilla JS</strong>, <strong>React.js</strong>, and <strong>Node.js</strong>, always with a focus on integrating these technologies into Python-based backend solutions. Additionally, my projects have involved approaches utilizing cloud platforms like <strong>AWS</strong>, <strong>GCP</strong>, and <strong>Azure</strong>. 
-Eager to transition into my first professional role in development, I'm ready to contribute to innovative projects and leverage my expertise!
-</p>
+<p>Based in Buenos Aires, I’ve been working with <strong>Python</strong> since October 2020, when I started learning to program. I also have experience in frontend development using <strong>Vanilla JS, React.js, Astro.js, Vue.js,</strong> and <strong>Node.js</strong>, integrating them with Python backends and AI. I’ve worked with cloud services like <strong>AWS, Azure,</strong> and <strong>GCP</strong>. I’m dedicated to <strong>learning</strong> and always give my best, with <strong>commitment and high standards</strong>. I’m looking to join a team where I can continue to grow and contribute.</p>
+
 <div align="center">  
 
 ### 🛠️ Tech Stack:
