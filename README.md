@@ -9,7 +9,9 @@
     </a>
   </div>
 
-<p>Based in Buenos Aires, I’ve been working with <strong>Python</strong> since October 2020, when I started learning to program. I also have experience in frontend development using <strong>Vanilla JS, React.js, Astro.js, Vue.js,</strong> and <strong>Node.js</strong>, integrating them with Python backends and AI. I’ve worked with cloud services like <strong>AWS, Azure,</strong> and <strong>GCP</strong>. I’m dedicated to <strong>learning</strong> and always give my best, with <strong>commitment and high standards</strong>. I’m looking to join a team where I can continue to grow and contribute.</p>
+<p>I specialize in driving <strong>innovation, integrity, and teamwork culture</strong> in every project I participate in, generating <strong>high-impact and value-added solutions</strong>. I began with <strong>Python</strong> in October 2020. Throughout my experience, I have worked on <strong>integrating backends</strong> in Python with <strong>AI and frontend solutions</strong>.</p>
+<p>I have knowledge in frontend development using technologies such as <strong>Vanilla JS, React.js, Astro.js, Vue.js, and Node.js</strong>, as well as experience with cloud platforms like <strong>AWS, Azure, and GCP</strong>.</p>
+
 
 <div align="center">  
 
