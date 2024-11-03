@@ -1,0 +1,6 @@
+# Required for GitHub API interaction
+PyGithub==2.4.0
+
+# Required for type hints and modern Python features
+typing-extensions>=4.8.0
+python-dotenv

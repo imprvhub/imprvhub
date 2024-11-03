@@ -50,6 +50,10 @@
 </div>
 
 
+<div align="center">
+  <img src="scripts/stats.svg" alt="Most Used Languages" />
+</div>
+
 
 <div align="center">  
   
