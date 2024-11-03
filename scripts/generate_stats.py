@@ -50,7 +50,8 @@ def create_language_svg(language_percentages):
         'width': str(svg_width),
         'height': str(svg_height),
         'viewBox': f'0 0 {svg_width} {svg_height}',
-        'style': 'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;'
+        'style': 'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;',
+        'data-color-mode': 'light dark'
     })
     
     style = ET.SubElement(svg, 'style')
@@ -66,62 +67,19 @@ def create_language_svg(language_percentages):
         .card { filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)); }
         .bar { animation: slideIn 1s ease-out forwards; }
         .text { animation: fadeIn 0.5s ease-out forwards; }
-        .language { font-size: 12px; fill: currentColor; }
-        .percentage { font-size: 12px; fill: currentColor; opacity: 0.8; }
-    '''
-    
-    defs = ET.SubElement(svg, 'defs')
-    
-    light_gradient = ET.SubElement(defs, 'linearGradient', {
-        'id': 'cardBgLight',
-        'x1': '0%',
-        'y1': '0%',
-        'x2': '100%',
-        'y2': '100%'
-    })
-    ET.SubElement(light_gradient, 'stop', {
-        'offset': '0%',
-        'style': 'stop-color:#ffffff;stop-opacity:1'
-    })
-    ET.SubElement(light_gradient, 'stop', {
-        'offset': '100%',
-        'style': 'stop-color:#f7f7f7;stop-opacity:1'
-    })
-    
-    dark_gradient = ET.SubElement(defs, 'linearGradient', {
-        'id': 'cardBgDark',
-        'x1': '0%',
-        'y1': '0%',
-        'x2': '100%',
-        'y2': '100%'
-    })
-    ET.SubElement(dark_gradient, 'stop', {
-        'offset': '0%',
-        'style': 'stop-color:#0d1117;stop-opacity:1'
-    })
-    ET.SubElement(dark_gradient, 'stop', {
-        'offset': '100%',
-        'style': 'stop-color:#161b22;stop-opacity:1'
-    })
-    
-    script = ET.SubElement(svg, 'script')
-    script.text = '''
-        function updateTheme() {
-            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const card = document.querySelector('.card-bg');
-            const texts = document.querySelectorAll('.language, .percentage');
-            if (isDark) {
-                card.setAttribute('fill', 'url(#cardBgDark)');
-                texts.forEach(t => t.setAttribute('fill', '#ffffff'));  // White text for dark mode
-            } else {
-                card.setAttribute('fill', 'url(#cardBgLight)');
-                texts.forEach(t => t.setAttribute('fill', '#24292f'));
-            }
+        .language { font-size: 12px; }
+        .percentage { font-size: 12px; opacity: 0.8; }
+
+        @media (prefers-color-scheme: dark) {
+            .card-bg { fill: #0d1117 !important; }
+            .language, .percentage { fill: #ffffff !important; }
+            .bar-color { fill: #4494F8 !important; }
         }
-        if (window.matchMedia) {
-            window.matchMedia('(prefers-color-scheme: dark)')
-                .addEventListener('change', updateTheme);
-            updateTheme();
+
+        @media (prefers-color-scheme: light) {
+            .card-bg { fill: #ffffff !important; }
+            .language, .percentage { fill: #24292f !important; }
+            .bar-color { fill: #5E5E5E !important; }
         }
     '''
     
@@ -132,8 +90,7 @@ def create_language_svg(language_percentages):
         'y': '0',
         'width': str(svg_width),
         'height': str(svg_height),
-        'rx': str(card_radius),
-        'fill': 'url(#cardBgLight)'
+        'rx': str(card_radius)
     })
     
     title = ET.SubElement(svg, 'text', {
@@ -143,20 +100,6 @@ def create_language_svg(language_percentages):
         'style': 'font-size: 18px; font-weight: 600;'
     })
     title.text = 'Most Used Languages:'
-    
-    colors = {
-        'Python': '#5E5E5E',
-        'JavaScript': '#5E5E5E',
-        'TypeScript': '#5E5E5E',
-        'Vue': '#5E5E5E',
-        'Astro': '#5E5E5E',
-        'CSS': '#5E5E5E',
-        'HTML': '#5E5E5E',
-        'Java': '#5E5E5E',
-        'SCSS': '#5E5E5E',
-        'MDX': '#5E5E5E',
-        'Shell': '#5E5E5E'
-    }
     
     sorted_languages = sorted(
         language_percentages.items(),
@@ -185,13 +128,12 @@ def create_language_svg(language_percentages):
         lang_text.text = lang
         
         ET.SubElement(g, 'rect', {
-            'class': 'bar',
+            'class': 'bar bar-color',
             'x': str(padding + 25),
             'y': str(text_offset),
             'width': str((percentage / 100) * max_bar_width),
             'height': str(bar_height),
             'rx': '4',
-            'fill': colors.get(lang, '#8b949e'),
             'style': f'animation-delay: {delay}s'
         })
         
