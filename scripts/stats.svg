@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;"><style>
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .card { filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)); }
+        .bar { animation: slideIn 1s ease-out forwards; }
+        .text { animation: fadeIn 0.5s ease-out forwards; }
+        .language { font-size: 12px; fill: currentColor; }
+        .percentage { font-size: 12px; fill: currentColor; opacity: 0.8; }
+    </style><defs><linearGradient id="cardBgLight" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" /><stop offset="100%" style="stop-color:#f7f7f7;stop-opacity:1" /></linearGradient><linearGradient id="cardBgDark" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" /><stop offset="100%" style="stop-color:#161b22;stop-opacity:1" /></linearGradient></defs><script>
+        function updateTheme() {
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const card = document.querySelector('.card-bg');
+            const texts = document.querySelectorAll('.language, .percentage');
+            if (isDark) {
+                card.setAttribute('fill', 'url(#cardBgDark)');
+                texts.forEach(t =&gt; t.setAttribute('fill', '#ffffff'));  // White text for dark mode
+            } else {
+                card.setAttribute('fill', 'url(#cardBgLight)');
+                texts.forEach(t =&gt; t.setAttribute('fill', '#24292f'));
+            }
+        }
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: dark)')
+                .addEventListener('change', updateTheme);
+            updateTheme();
+        }
+    </script><g class="card"><rect class="card-bg" x="0" y="0" width="300" height="400" rx="12" fill="url(#cardBgLight)" /></g><text x="55" y="25" class="text language" style="font-size: 18px; font-weight: 600;">Most Used Languages:</text><g transform="translate(0, 50)" style="animation-delay: 0.0s"><text class="text language" x="55" y="0" dominant-baseline="middle" style="animation-delay: 0.0s">Python</text><rect class="bar" x="55" y="15" width="116.66666666666667" height="10" rx="4" fill="#5E5E5E" style="animation-delay: 0.0s" /><text class="text percentage" x="245" y="22.0" text-anchor="end" dominant-baseline="middle" style="animation-delay: 0.0s">55.6%</text></g><g transform="translate(0, 90)" style="animation-delay: 0.1s"><text class="text language" x="55" y="0" dominant-baseline="middle" style="animation-delay: 0.1s">JavaScript</text><rect class="bar" x="55" y="15" width="73.88888888888889" height="10" rx="4" fill="#5E5E5E" style="animation-delay: 0.1s" /><text class="text percentage" x="245" y="22.0" text-anchor="end" dominant-baseline="middle" style="animation-delay: 0.1s">35.2%</text></g><g transform="translate(0, 130)" style="animation-delay: 0.2s"><text class="text language" x="55" y="0" dominant-baseline="middle" style="animation-delay: 0.2s">CSS</text><rect class="bar" x="55" y="15" width="42.77777777777778" height="10" rx="4" fill="#5E5E5E" style="animation-delay: 0.2s" /><text class="text percentage" x="245" y="22.0" text-anchor="end" dominant-baseline="middle" style="animation-delay: 0.2s">20.4%</text></g><g transform="translate(0, 170)" style="animation-delay: 0.30000000000000004s"><text class="text language" x="55" y="0" dominant-baseline="middle" style="animation-delay: 0.30000000000000004s">HTML</text><rect class="bar" x="55" y="15" width="34.99999999999999" height="10" rx="4" fill="#5E5E5E" style="animation-delay: 0.30000000000000004s" /><text class="text percentage" x="245" y="22.0" text-anchor="end" dominant-baseline="middle" style="animation-delay: 0.30000000000000004s">16.7%</text></g><g transform="translate(0, 210)" style="animation-delay: 0.4s"><text class="text language" x="55" y="0" dominant-baseline="middle" style="animation-delay: 0.4s">Astro</text><rect class="bar" x="55" y="15" width="31.11111111111111" height="10" rx="4" fill="#5E5E5E" style="animation-delay: 0.4s" /><text class="text percentage" x="245" y="22.0" text-anchor="end" dominant-baseline="middle" style="animation-delay: 0.4s">14.8%</text></g><g transform="translate(0, 250)" style="animation-delay: 0.5s"><text class="text language" x="55" y="0" dominant-baseline="middle" style="animation-delay: 0.5s">TypeScript</text><rect class="bar" x="55" y="15" width="31.11111111111111" height="10" rx="4" fill="#5E5E5E" style="animation-delay: 0.5s" /><text class="text percentage" x="245" y="22.0" text-anchor="end" dominant-baseline="middle" style="animation-delay: 0.5s">14.8%</text></g><g transform="translate(0, 290)" style="animation-delay: 0.6000000000000001s"><text class="text language" x="55" y="0" dominant-baseline="middle" style="animation-delay: 0.6000000000000001s">Shell</text><rect class="bar" x="55" y="15" width="15.555555555555555" height="10" rx="4" fill="#5E5E5E" style="animation-delay: 0.6000000000000001s" /><text class="text percentage" x="245" y="22.0" text-anchor="end" dominant-baseline="middle" style="animation-delay: 0.6000000000000001s">7.4%</text></g><g transform="translate(0, 330)" style="animation-delay: 0.7000000000000001s"><text class="text language" x="55" y="0" dominant-baseline="middle" style="animation-delay: 0.7000000000000001s">Java</text><rect class="bar" x="55" y="15" width="15.555555555555555" height="10" rx="4" fill="#5E5E5E" style="animation-delay: 0.7000000000000001s" /><text class="text percentage" x="245" y="22.0" text-anchor="end" dominant-baseline="middle" style="animation-delay: 0.7000000000000001s">7.4%</text></g></svg>

@@ -97,11 +97,11 @@ def create_language_svg(language_percentages):
     })
     ET.SubElement(dark_gradient, 'stop', {
         'offset': '0%',
-        'style': 'stop-color:#2d333b;stop-opacity:1'
+        'style': 'stop-color:#0d1117;stop-opacity:1'
     })
     ET.SubElement(dark_gradient, 'stop', {
         'offset': '100%',
-        'style': 'stop-color:#22272e;stop-opacity:1'
+        'style': 'stop-color:#161b22;stop-opacity:1'
     })
     
     script = ET.SubElement(svg, 'script')
@@ -112,7 +112,7 @@ def create_language_svg(language_percentages):
             const texts = document.querySelectorAll('.language, .percentage');
             if (isDark) {
                 card.setAttribute('fill', 'url(#cardBgDark)');
-                texts.forEach(t => t.setAttribute('fill', '#e6edf3'));
+                texts.forEach(t => t.setAttribute('fill', '#ffffff'));  // White text for dark mode
             } else {
                 card.setAttribute('fill', 'url(#cardBgLight)');
                 texts.forEach(t => t.setAttribute('fill', '#24292f'));
@@ -184,7 +184,6 @@ def create_language_svg(language_percentages):
         })
         lang_text.text = lang
         
-        # Barra
         ET.SubElement(g, 'rect', {
             'class': 'bar',
             'x': str(padding + 25),
