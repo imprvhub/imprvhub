@@ -2,7 +2,7 @@ name: Update GitHub Stats SVG
 
 on:
   schedule:
-    - cron: '0 0 * * 0' 
+    - cron: '0 0 * * 0'
   workflow_dispatch:
 
 permissions:
@@ -13,30 +13,38 @@ permissions:
 jobs:
   update-stats:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-          
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
+
       - name: Generate SVG
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           python scripts/generate_stats.py
-          
+
       - name: Commit and push if changed
         run: |
-            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git config --local user.name "github-actions[bot]"
-            git add stats.svg
-            git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update language statistics svg and text files" && git push)
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add stats.svg
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update GitHub language usage stats and generate SVG visualization
+
+- Add script to authenticate with GitHub API and retrieve language usage data across all repositories owned by the authenticated user.
+- Calculate language usage percentages based on repository counts for each language.
+- Generate an SVG visualization showing the top 8 most used languages with bars representing percentage usage.
+- Apply animations (slide-in and fade-in) to SVG elements for enhanced visual presentation.
+- Set up light and dark theme compatibility using media queries in SVG styling.
+
+This update automates language usage data retrieval and creates a reusable, visually appealing SVG output for GitHub profiles." && git push)
