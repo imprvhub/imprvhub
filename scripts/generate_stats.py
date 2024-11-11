@@ -18,25 +18,26 @@ def get_languages_stats():
             repo_count += 1
             try:
                 repo_languages = repo.get_languages()
-                # Normalizar los nombres de los lenguajes
                 for language, bytes in repo_languages.items():
-                    # Asegurarse de que 'C' se detecte correctamente
                     normalized_language = language
                     if language.upper() == 'C':
                         normalized_language = 'C'
+                    elif language.upper() == 'CSS':
+                        normalized_language = 'JavaScript'
+                    
                     language_repo_count[normalized_language] = language_repo_count.get(normalized_language, 0) + 1
+                    
             except Exception as e:
                 print(f"   ⚠️ Error al procesar el repositorio {repo.name}: {str(e)}")
                 print("-" * 50)
-                
-        # Calcular porcentajes
+
         language_percentages = {
             lang: (count / repo_count * 100)
             for lang, count in language_repo_count.items()
+            if lang.upper() != 'CSS' 
         }
-        
-        # Imprimir para debug
-        print("\nLenguajes detectados:")
+
+        print("\nLenguajes detectados (CSS incluido en JavaScript):")
         for lang, percentage in language_percentages.items():
             print(f"{lang}: {percentage:.1f}%")
             
