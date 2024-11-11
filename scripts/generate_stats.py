@@ -7,13 +7,19 @@ load_dotenv()
 github_token = os.getenv('GH_TOKEN')
 
 def get_languages_stats():
+    """
+    Obtiene estadísticas de lenguajes de programación de los repositorios del usuario.
+    Normaliza los nombres de los lenguajes y combina CSS y HTML con JavaScript.
+    
+    Returns:
+        dict: Diccionario con los porcentajes de uso de cada lenguaje
+    """
     try:
         g = Github(github_token)
         authenticated_user = g.get_user()
         language_repo_count = {}
         repo_count = 0        
         repos = authenticated_user.get_repos(affiliation='owner')
-        
         for repo in repos:
             repo_count += 1
             try:
@@ -22,22 +28,24 @@ def get_languages_stats():
                     normalized_language = language
                     if language.upper() == 'C':
                         normalized_language = 'C'
-                    elif language.upper() == 'CSS':
-                        normalized_language = 'JavaScript'
-                    
+                    elif language.upper() in ['CSS', 'HTML']:
+                        normalized_language = 'Vanilla JS/React.js'
+                    elif language == 'JavaScript':
+                        normalized_language = 'Vanilla JS/React.js'
+
                     language_repo_count[normalized_language] = language_repo_count.get(normalized_language, 0) + 1
                     
             except Exception as e:
                 print(f"   ⚠️ Error al procesar el repositorio {repo.name}: {str(e)}")
                 print("-" * 50)
-
+                
         language_percentages = {
             lang: (count / repo_count * 100)
             for lang, count in language_repo_count.items()
-            if lang.upper() != 'CSS' 
+            if lang.upper() not in ['CSS', 'HTML'] 
         }
 
-        print("\nLenguajes detectados (CSS incluido en JavaScript):")
+        print("\nLenguajes detectados (CSS y HTML incluidos en Vanilla JS/React.js):")
         for lang, percentage in language_percentages.items():
             print(f"{lang}: {percentage:.1f}%")
             
@@ -48,6 +56,13 @@ def get_languages_stats():
         return {}
 
 def create_language_svg(language_percentages):
+    """
+    Crea un archivo SVG con una visualización de las estadísticas de lenguajes.
+    
+    Args:
+        language_percentages (dict): Diccionario con los porcentajes de uso de cada lenguaje
+    """
+
     svg_width = 300
     svg_height = 400
     padding = 30
@@ -55,7 +70,7 @@ def create_language_svg(language_percentages):
     spacing = 30
     card_radius = 12
     text_offset = 15
-    
+
     svg = ET.Element('svg', {
         'xmlns': 'http://www.w3.org/2000/svg',
         'width': str(svg_width),
@@ -64,7 +79,7 @@ def create_language_svg(language_percentages):
         'style': 'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;',
         'data-color-mode': 'light dark'
     })
-    
+
     style = ET.SubElement(svg, 'style')
     style.text = '''
         @keyframes slideIn {
@@ -93,7 +108,7 @@ def create_language_svg(language_percentages):
             .bar-color { fill: #5E5E5E !important; }
         }
     '''
-    
+
     card = ET.SubElement(svg, 'g', {'class': 'card'})
     ET.SubElement(card, 'rect', {
         'class': 'card-bg',
@@ -103,7 +118,7 @@ def create_language_svg(language_percentages):
         'height': str(svg_height),
         'rx': str(card_radius)
     })
-    
+
     title = ET.SubElement(svg, 'text', {
         'x': str(padding + 25),
         'y': str(padding - 5),
@@ -111,7 +126,7 @@ def create_language_svg(language_percentages):
         'style': 'font-size: 18px; font-weight: 600;'
     })
     title.text = 'Most Used Languages:'
-    
+
     sorted_languages = sorted(
         language_percentages.items(),
         key=lambda x: x[1],
@@ -123,12 +138,12 @@ def create_language_svg(language_percentages):
     
     for i, (lang, percentage) in enumerate(sorted_languages):
         delay = i * 0.1
-        
+
         g = ET.SubElement(svg, 'g', {
             'transform': f'translate(0, {y_position})',
             'style': f'animation-delay: {delay}s'
         })
-        
+
         lang_text = ET.SubElement(g, 'text', {
             'class': 'text language',
             'x': str(padding + 25),
@@ -147,7 +162,7 @@ def create_language_svg(language_percentages):
             'rx': '4',
             'style': f'animation-delay: {delay}s'
         })
-        
+    
         percentage_text = ET.SubElement(g, 'text', {
             'class': 'text percentage',
             'x': str(padding + max_bar_width + 5),
@@ -157,22 +172,23 @@ def create_language_svg(language_percentages):
             'style': f'animation-delay: {delay}s'
         })
         percentage_text.text = f'{percentage:.1f}%'
-        
         y_position += spacing + bar_height
-    
     tree = ET.ElementTree(svg)
     tree.write('stats.svg', encoding='utf-8', xml_declaration=True)
 
 def main():
+    """
+    Función principal que ejecuta el proceso completo:
+    1. Obtiene estadísticas de lenguajes
+    2. Genera el SVG con la visualización
+    """
     try:
         language_percentages = get_languages_stats()
-        
         print("\nGenerando SVG...")
         create_language_svg(language_percentages)
         print("SVG generado como 'stats.svg'")
         
     except Exception as e:
         print(f"Error: {str(e)}")
-
 if __name__ == "__main__":
     main()
