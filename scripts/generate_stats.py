@@ -1,9 +1,7 @@
 import os
 import xml.etree.ElementTree as ET
-
 from dotenv import load_dotenv
 from github import Github
-
 
 load_dotenv()
 github_token = os.getenv('GH_TOKEN')
@@ -20,16 +18,28 @@ def get_languages_stats():
             repo_count += 1
             try:
                 repo_languages = repo.get_languages()
-                for language in repo_languages.keys():
-                    language_repo_count[language] = language_repo_count.get(language, 0) + 1                
+                # Normalizar los nombres de los lenguajes
+                for language, bytes in repo_languages.items():
+                    # Asegurarse de que 'C' se detecte correctamente
+                    normalized_language = language
+                    if language.upper() == 'C':
+                        normalized_language = 'C'
+                    language_repo_count[normalized_language] = language_repo_count.get(normalized_language, 0) + 1
             except Exception as e:
                 print(f"   ⚠️ Error al procesar el repositorio {repo.name}: {str(e)}")
                 print("-" * 50)
+                
+        # Calcular porcentajes
         language_percentages = {
             lang: (count / repo_count * 100)
             for lang, count in language_repo_count.items()
         }
         
+        # Imprimir para debug
+        print("\nLenguajes detectados:")
+        for lang, percentage in language_percentages.items():
+            print(f"{lang}: {percentage:.1f}%")
+            
         return language_percentages
     
     except Exception as e:
