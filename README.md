@@ -12,7 +12,7 @@
 <p>I specialize in driving <strong>innovation, integrity, and teamwork culture</strong> in every project I participate in, generating <strong>high-impact and value-added solutions</strong>. I began with <strong>Python</strong> in October 2020. Throughout my experience, I have worked on <strong>integrating backends</strong> in Python with <strong>AI and frontend solutions</strong>.</p>
 <p>I have knowledge in frontend development using technologies such as <strong>Vanilla JS, React.js, Astro.js, Vue.js, and Node.js</strong>, as well as experience with cloud platforms like <strong>AWS, Azure, and GCP</strong>.</p>
 
-
+<br>
 <div align="center">  
 
 [![Ask AI](https://img.shields.io/badge/Ask_AI-5E5E5E?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlPSJ3aGl0ZSI+PHBhdGggc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik05LjgxMyAxNS45MDRMOSA5IDkgMTguNzVsLS44MTMtMi44NDZhNC41IDQuNSAwIDAgMC0zLjA5LTMuMDlMMi4yNSAxMmwyLjg0Ni0uODEzYTQuNSA0LjUgMCAwIDAgMy4wOS0zLjA5TDkgNS4yNWwuODEzIDIuODQ2YTQuNSA0LjUgMCAwIDAgMy4wOSAzLjA5TDE1Ljc1IDEybC0yLjg0Ni44MTNhNC41IDQuNSAwIDAgMC0zLjA5IDMuMDlaTTE4LjI1OSA4LjcxNUwxOCA5Ljc1bC0uMjU5LTEuMDM1YTMuMzc1IDMuMzc1IDAgMCAwLTIuNDU1LTIuNDU2TDE0LjI1IDZsMS4wMzYtLjI1OWEzLjM3NSAzLjM3NSAwIDAgMCAyLjQ1NS0yLjQ1NkwxOCAyLjI1bC4yNTkgMS4wMzVhMy4zNzUgMy4zNzUgMCAwIDAgMi40NTYgMi40NTZMMjEuNzUgNmwtMS4wMzUuMjU5YTMuMzc1IDMuMzc1IDAgMCAwLTIuNDU2IDIuNDU2WiIvPjwvc3ZnPg==)](https://ivanlunadev-ai-standalone-app.vercel.app/)
