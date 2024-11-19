@@ -1,5 +1,7 @@
 import os
 import xml.etree.ElementTree as ET
+from collections import Counter
+
 from dotenv import load_dotenv
 from github import Github
 
@@ -7,54 +9,50 @@ load_dotenv()
 github_token = os.getenv('GH_TOKEN')
 
 def get_languages_stats():
-    """
-    Obtiene estadísticas de lenguajes de programación de los repositorios del usuario.
-    Normaliza los nombres de los lenguajes y combina CSS y HTML con JavaScript.
-    
-    Returns:
-        dict: Diccionario con los porcentajes de uso de cada lenguaje
-    """
     try:
         g = Github(github_token)
         authenticated_user = g.get_user()
-        language_repo_count = {}
-        repo_count = 0        
+        language_repo_count = Counter()
         repos = authenticated_user.get_repos(affiliation='owner')
+
         for repo in repos:
-            repo_count += 1
             try:
                 repo_languages = repo.get_languages()
-                for language, bytes in repo_languages.items():
-                    normalized_language = language
-                    if language.upper() == 'C':
-                        normalized_language = 'C'
-                    elif language.upper() in ['CSS', 'HTML']:
+                for language in repo_languages.keys():
+                    if language.upper() in ['CSS', 'HTML', 'JAVASCRIPT']:
                         normalized_language = 'Vanilla JS/React.js'
-                    elif language == 'JavaScript':
-                        normalized_language = 'Vanilla JS/React.js'
-
-                    language_repo_count[normalized_language] = language_repo_count.get(normalized_language, 0) + 1
-                    
+                    else:
+                        normalized_language = language
+                    language_repo_count[normalized_language] += 1
             except Exception as e:
                 print(f"   ⚠️ Error al procesar el repositorio {repo.name}: {str(e)}")
                 print("-" * 50)
-                
-        language_percentages = {
-            lang: (count / repo_count * 100)
-            for lang, count in language_repo_count.items()
-            if lang.upper() not in ['CSS', 'HTML'] 
-        }
 
-        print("\nLenguajes detectados (CSS y HTML incluidos en Vanilla JS/React.js):")
-        for lang, percentage in language_percentages.items():
+        most_common = dict(language_repo_count.most_common(8))
+        total_top_8 = sum(most_common.values())
+
+        normalized_percentages = {}
+        remaining = 100.0 
+
+        languages = list(most_common.items())
+        for lang, count in languages[:-1]:
+            percentage = round((count / total_top_8 * 100), 1)
+            normalized_percentages[lang] = percentage
+            remaining -= percentage
+
+        last_lang = languages[-1][0]
+        normalized_percentages[last_lang] = round(remaining, 1)
+
+        print("\nLenguajes detectados (CSS, HTML y JavaScript combinados en Vanilla JS/React.js):")
+        for lang, percentage in sorted(normalized_percentages.items(), key=lambda x: x[1], reverse=True):
             print(f"{lang}: {percentage:.1f}%")
-            
-        return language_percentages
-    
+
+        return normalized_percentages
+
     except Exception as e:
         print(f"Error de autenticación: {str(e)}")
         return {}
-
+    
 def create_language_svg(language_percentages):
     """
     Crea un archivo SVG con una visualización de las estadísticas de lenguajes.
