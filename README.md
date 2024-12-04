@@ -27,6 +27,8 @@
     <img style="height: 20px;" alt="Flask" src="https://img.shields.io/badge/-Flask-5E5E5E?style=flat-square&logo=flask&logoColor=white" />
     <img style="height: 20px;" alt="Django" src="https://img.shields.io/badge/-Django-5E5E5E?style=flat-square&logo=django&logoColor=white" />
     <img style="height: 20px;" alt="Docker" src="https://img.shields.io/badge/-Docker-5E5E5E?style=flat-square&logo=docker&logoColor=white" />
+    <img style="height: 20px;" alt="TensorFlow" src="https://img.shields.io/badge/-TensorFlow-5E5E5E?style=flat-square&logo=tensorflow&logoColor=white" />
+    <img style="height: 20px;" alt="Scikit-learn" src="https://img.shields.io/badge/-Scikit--learn-5E5E5E?style=flat-square&logo=scikit-learn&logoColor=white" />
     <img style="height: 20px;" alt="React" src="https://img.shields.io/badge/-React-5E5E5E?style=flat-square&logo=react&logoColor=white" />
     <img style="height: 20px;" alt="Vue.js" src="https://img.shields.io/badge/-Vue.js-5E5E5E?style=flat-square&logo=Vue.js&logoColor=white" />
     <img style="height: 20px;" alt="javascript" src="https://img.shields.io/badge/-VanillaJS-5E5E5E?style=flat-square&logo=javascript&logoColor=white" />
@@ -38,11 +40,11 @@
   <div style="display: flex; flex-wrap: wrap; gap: 1px; justify-content: center;">
     <img style="height: 20px;" alt="Google Cloud Platform" src="https://img.shields.io/badge/-Google_Cloud_Platform-5E5E5E?style=flat-square&logo=google-cloud&logoColor=white" />
     <img style="height: 20px;" alt="github actions" src="https://img.shields.io/badge/-Github_Actions-5E5E5E?style=flat-square&logo=github-actions&logoColor=white" />
-    <img style="height: 20px;" alt="Azure" src="https://img.shields.io/badge/-Azure-5E5E5E?style=flat-square&logo=microsoftazure&logoColor=white" />
+    <img style="height: 20px;" alt="Azure" src="https://badgen.net/badge/icon/Azure?icon=azure&label&color=5E5E5E" />
     <img style="height: 20px;" alt="Netlify" src="https://img.shields.io/badge/-Netlify-5E5E5E?style=flat-square&logo=netlify&logoColor=white" />
     <img style="height: 20px;" alt="git" src="https://img.shields.io/badge/-Git-5E5E5E?style=flat-square&logo=git&logoColor=white" />
     <img style="height: 20px;" alt="npm" src="https://img.shields.io/badge/-NPM-5E5E5E?style=flat-square&logo=npm&logoColor=white" />
-    <img style="height: 20px;" alt="amazonaws" src="https://img.shields.io/badge/-AWS-5E5E5E?style=flat-square&logo=amazonaws&logoColor=white" />
+    <img style="height: 20px;" alt="amazonaws" src="https://img.shields.io/badge/-AWS-5E5E5E?style=flat-square&logo=amazonwebservices&logoColor=white" />
     <img style="height: 20px;" alt="vercel" src="https://img.shields.io/badge/-Vercel-5E5E5E?style=flat-square&logo=vercel&logoColor=white" />
     <img style="height: 20px;" alt="mysql" src="https://img.shields.io/badge/-MySQL-5E5E5E?style=flat-square&logo=mysql&logoColor=white" />
     <img style="height: 20px;" alt="postgres" src="https://img.shields.io/badge/-PostgreSQL-5E5E5E?style=flat-square&logo=postgresql&logoColor=white" />
