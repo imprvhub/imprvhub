@@ -9,8 +9,8 @@
     </a>
   </div>
 
-<p>I specialize in driving <strong>innovation, integrity, and teamwork culture</strong> in every project I participate in, generating <strong>high-impact and value-added solutions</strong>. I began with <strong>Python</strong> in October 2020. Throughout my experience, I have worked on <strong>integrating backends</strong> in Python with <strong>AI and frontend solutions</strong>.</p>
-<p>I have knowledge in frontend development using technologies such as <strong>Vanilla JS, React.js, Astro.js, Vue.js, and Node.js</strong>, as well as experience with cloud platforms like <strong>AWS, Azure, and GCP</strong>.</p>
+<p>I drive <strong>innovation</strong>, <strong>teamwork</strong> and <strong>integrity</strong>, seeking to provide <strong>solutions</strong> that generate <strong>impact and value</strong>. I began specializing in <strong>Python</strong> in October 2020 and since then, I have had the opportunity to integrate <strong>backends</strong> in Python with <strong>artificial intelligence</strong> and <strong>frontend</strong> solutions. I have also acquired knowledge in frontend development using technologies such as <strong>Vanilla JS</strong>, <strong>React.js</strong>, <strong>Astro.js</strong>, <strong>Vue.js</strong> and <strong>Node.js</strong>, as well as experience working with cloud technologies like <strong>AWS</strong>, <strong>Azure</strong> and <strong>GCP</strong>.</p>
+<p>I am committed to contributing to <strong>open source</strong> projects and am always seeking new challenges that allow me to expand my technological horizons and continue growing professionally in development.</p>
 
 <br>
 <div align="center">  
