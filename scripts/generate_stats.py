@@ -91,13 +91,13 @@ def create_language_svg(language_percentages):
         @media (prefers-color-scheme: dark) {
             .card-bg { fill: #0d1117 !important; }
             .language, .percentage { fill: #ffffff !important; }
-            .bar-color { fill: #4494F8 !important; }
+            .bar-color { fill: #9f9178 !important; }
         }
 
         @media (prefers-color-scheme: light) {
             .card-bg { fill: #ffffff !important; }
             .language, .percentage { fill: #24292f !important; }
-            .bar-color { fill: #5E5E5E !important; }
+            .bar-color { fill: #9f9178 !important; }
         }
     '''
 
