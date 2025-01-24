@@ -39,10 +39,8 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add stats.svg
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update GitHub language usage stats and generate SVG visualization" -m "| 
-            - Add script to authenticate with GitHub API and retrieve language usage data across all repositories owned by the authenticated user.
-            - Calculate language usage percentages based on repository counts for each language.
-            - Generate an SVG visualization showing the top 8 most used languages with bars representing percentage usage.
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(stats): update SVG of GitHub language usage stats." -m "| 
+            - Generate an automated SVG visualization showing the top 10 most used languages with bars representing percentage usage.
             - Apply animations (slide-in and fade-in) to SVG elements for enhanced visual presentation.
             - Set up light and dark theme compatibility using media queries in SVG styling.
             

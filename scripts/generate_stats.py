@@ -21,6 +21,8 @@ def get_languages_stats():
                 for language in repo_languages.keys():
                     if language.upper() in ['CSS', 'HTML', 'JAVASCRIPT']:
                         normalized_language = 'Vanilla JS/React.js'
+                    elif language.upper() in ['GO', 'GOLANG']:
+                        normalized_language = 'Go'
                     else:
                         normalized_language = language
                     language_repo_count[normalized_language] += 1
@@ -28,41 +30,33 @@ def get_languages_stats():
                 print(f"   ⚠️ Error al procesar el repositorio {repo.name}: {str(e)}")
                 print("-" * 50)
 
-        most_common = dict(language_repo_count.most_common(8))
-        total_top_8 = sum(most_common.values())
+        most_common = dict(language_repo_count.most_common(10))
+        total_top_10 = sum(most_common.values())
 
         normalized_percentages = {}
         remaining = 100.0 
 
         languages = list(most_common.items())
         for lang, count in languages[:-1]:
-            percentage = round((count / total_top_8 * 100), 1)
+            percentage = round((count / total_top_10 * 100), 1)
             normalized_percentages[lang] = percentage
             remaining -= percentage
 
         last_lang = languages[-1][0]
         normalized_percentages[last_lang] = round(remaining, 1)
-
-        print("\nLenguajes detectados (CSS, HTML y JavaScript combinados en Vanilla JS/React.js):")
+        
         for lang, percentage in sorted(normalized_percentages.items(), key=lambda x: x[1], reverse=True):
             print(f"{lang}: {percentage:.1f}%")
 
         return normalized_percentages
 
     except Exception as e:
-        print(f"Error de autenticación: {str(e)}")
+        print(f"Authentication Error: {str(e)}")
         return {}
     
 def create_language_svg(language_percentages):
-    """
-    Crea un archivo SVG con una visualización de las estadísticas de lenguajes.
-    
-    Args:
-        language_percentages (dict): Diccionario con los porcentajes de uso de cada lenguaje
-    """
-
     svg_width = 300
-    svg_height = 400
+    svg_height = 470
     padding = 30
     bar_height = 10
     spacing = 30
@@ -129,7 +123,7 @@ def create_language_svg(language_percentages):
         language_percentages.items(),
         key=lambda x: x[1],
         reverse=True
-    )[:8]
+    )[:10]
     
     y_position = padding + 20
     max_bar_width = svg_width - (padding * 3)
@@ -171,22 +165,19 @@ def create_language_svg(language_percentages):
         })
         percentage_text.text = f'{percentage:.1f}%'
         y_position += spacing + bar_height
+
     tree = ET.ElementTree(svg)
     tree.write('stats.svg', encoding='utf-8', xml_declaration=True)
 
 def main():
-    """
-    Función principal que ejecuta el proceso completo:
-    1. Obtiene estadísticas de lenguajes
-    2. Genera el SVG con la visualización
-    """
     try:
         language_percentages = get_languages_stats()
-        print("\nGenerando SVG...")
+        print("\nGenerating SVG...")
         create_language_svg(language_percentages)
-        print("SVG generado como 'stats.svg'")
+        print("Generated SVG as 'stats.svg'")
         
     except Exception as e:
         print(f"Error: {str(e)}")
+
 if __name__ == "__main__":
     main()
