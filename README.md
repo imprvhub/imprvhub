@@ -8,11 +8,11 @@
 <br>
 
 
-<div align="center">
+<div align="center" left="20px">
 
 ```python
-def current_tech_focus():
-    return ['AI integration', 'Backend systems', 'Cloud architecture']
+    def current_tech_focus():
+      return ['Backend Engineering', 'AI Integration', 'MCP Implementations', 'Cloud Architecture']
 ```
 
 </div>
